@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - Car Saathi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="results-style.css">
+    <style>
+        /* Placeholder for persistent profile link styling */
+        #logged-in-links a, #logged-out-links a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">🚗 Car Saathi</div>
+            <nav class="nav-links">
+                <a href="index.html">Find a Ride</a>
+                <a href="offer-ride.html">Offer a Ride</a>
+            </nav>
+            <div class="user-actions">
+                <span id="logged-out-links" style="display: none;">
+                    <a href="login.html">Log in</a>
+                    <a href="signup.html" class="btn-signup">Sign up</a>
+                </span>
+                
+                <span id="logged-in-links" style="display: none;">
+                    <a href="profile.html">My Account</a> 
+                    <a href="#" id="logout-button" class="btn-signup">Log Out</a> 
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <main class="results-page-section">
+        <div class="container">
+            <h1 id="results-header">Search Results</h1>
+            
+            <div class="results-content">
+                
+                <aside class="sidebar-filters">
+                    <h3>Filter Your Ride</h3>
+                    <form id="filter-form">
+                        <div class="filter-group">
+                            <h4>Departure Time</h4>
+                            <label for="min-time">From:</label>
+                            <input type="time" id="min-time" value="06:00">
+                            <label for="max-time">To:</label>
+                            <input type="time" id="max-time" value="23:00">
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h4>Price Range (₹)</h4>
+                            <input 
+                                type="range" 
+                                id="max-price-slider" 
+                                min="100" 
+                                max="1500" 
+                                value="1000" 
+                                step="50"
+                                style="width: 100%; margin: 10px 0;"
+                            >
+                            <p>Max Price: <span id="max-price-display">₹ 1000</span></p>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h4>Booking Preferences</h4>
+                            <label><input type="checkbox" id="filter-instant"> **Instant Booking** (No driver approval needed)</label>
+                            <label><input type="checkbox" id="filter-max-seats"> **Max. 2 in the Back** (More comfort)</label>
+                        </div>
+                        <button type="submit" class="btn-apply-filters">Apply Filters</button>
+                    </form>
+                    
+                    <hr style="margin: 20px 0; border-color: #ddd;">
+
+                    <button id="create-alert-btn" class="btn-create-alert">
+                        🔔 Create Alert for this Route
+                    </button>
+                </aside>
+
+                <section class="ride-list-container">
+                    <div class="ride-card" data-time="07:30" data-price="650" data-instant="true" data-max-seats="true">
+                        <div class="ride-info">
+                            <span class="ride-time">07:30 AM</span>
+                            <span class="ride-route">New Delhi → Chandigarh</span>
+                        </div>
+                        <div class="driver-info">
+                            <p>Driver: **Rajesh S.** (✅ Instant)</p>
+                            <p>Car: Swift Dzire</p>
+                        </div>
+                        <div class="ride-price">
+                            <span class="price">₹ 650</span>
+                            <a href="#" class="btn-book">Book Seat</a>
+                        </div>
+                    </div>
+                    
+                    <div class="ride-card" data-time="10:00" data-price="720" data-instant="false" data-max-seats="false">
+                        <div class="ride-info">
+                            <span class="ride-time">10:00 AM</span>
+                            <span class="ride-route">New Delhi → Chandigarh</span>
+                        </div>
+                        <div class="driver-info">
+                            <p>Driver: **Priya M.**</p>
+                            <p>Car: Maruti Ertiga</p>
+                        </div>
+                        <div class="ride-price">
+                            <span class="price">₹ 720</span>
+                            <a href="#" class="btn-book">Book Seat</a>
+                        </div>
+                    </div>
+
+                    <div class="ride-card" data-time="14:45" data-price="600" data-instant="true" data-max-seats="true">
+                        <div class="ride-info">
+                            <span class="ride-time">02:45 PM</span>
+                            <span class="ride-route">New Delhi → Chandigarh</span>
+                        </div>
+                        <div class="driver-info">
+                            <p>Driver: **Amit K.** (✅ Instant)</p>
+                            <p>Car: Honda City</p>
+                        </div>
+                        <div class="ride-price">
+                            <span class="price">₹ 600</span>
+                            <a href="#" class="btn-book">Book Seat</a>
+                        </div>
+                    </div>
+                    
+                </section>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-section"><h3>Car Saathi</h3><ul><li><a href="#">Who We Are</a></li><li><a href="#">How It Works</a></li><li><a href="#">Careers (We're Hiring!)</a></li><li><a href="#">Press</a></li></ul></div>
+            <div class="footer-section"><h3>Help & Support</h3><ul><li><a href="#">Help Centre</a></li><li><a href="#">Trust & Safety</a></li><li><a href="#">Contact Us</a></li><li><a href="#">Sitemap</a></li></ul></div>
+            <div class="footer-section"><h3>Legal</h3><ul><li><a href="#">Terms and Conditions</a></li><li><a href="#">Privacy Policy</a></li></li></ul></div>
+        </div>
+        <div class="footer-bottom"><p>Car Saathi, 2025 © | Go anywhere with a Saathi.</p></div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

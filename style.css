@@ -1,0 +1,263 @@
+/* Basic Reset and Variables */
+:root {
+    --primary-color: #008080; /* Car Saathi Teal/Green */
+    --secondary-color: #38a8a8;
+    --text-color: #333;
+    --bg-light: #f5f5f5;
+    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fff;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Header Styling --- */
+.main-header {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+.nav-links a, .user-actions a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 15px;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover, .user-actions a:hover {
+    color: var(--primary-color);
+}
+
+.btn-signup {
+    background-color: var(--primary-color);
+    color: white !important;
+    padding: 8px 15px;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    border: 2px solid var(--primary-color);
+}
+
+.btn-signup:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: white !important;
+}
+
+/* --- Hero Section and Search Form --- */
+.hero-section {
+    background-color: var(--bg-light); 
+    padding: 80px 0;
+    text-align: center;
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+.hero-section h1 {
+    font-size: 42px;
+    color: var(--text-color);
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Stretch fields to same height */
+    background-color: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-light);
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 10px; /* Space between form fields */
+}
+
+.form-group {
+    flex: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    height: 40px; /* Standardize input height */
+}
+
+.btn-search {
+    padding: 0 30px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.2s;
+    height: 40px; /* Match input height */
+    align-self: flex-end; /* Align to the bottom of the row */
+}
+
+.btn-search:hover {
+    background-color: var(--secondary-color);
+}
+
+/* --- Value Propositions Section --- */
+.value-props {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.value-props .container {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    text-align: center;
+}
+
+.prop-card {
+    flex: 1;
+    padding: 25px;
+    border-radius: var(--border-radius);
+    background-color: var(--bg-light);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.prop-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+/* --- Driver CTA Section --- */
+.driver-cta-section {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.driver-cta-section h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.driver-cta-section p {
+    margin-bottom: 20px;
+}
+
+.driver-cta-section .btn-primary {
+    display: inline-block;
+    background-color: white;
+    color: var(--primary-color);
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+.driver-cta-section .btn-primary:hover {
+    background-color: #e0e0e0;
+}
+
+
+/* --- Footer Styling --- */
+footer {
+    padding: 20px 0;
+    text-align: center;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+}
+
+/* --- Responsive Layout for Mobile (Small Screens) --- */
+@media (max-width: 768px) {
+    
+    .main-header .container {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .nav-links, .user-actions {
+        width: 100%;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .nav-links a, .user-actions a {
+        margin: 5px 10px;
+        display: inline-block;
+    }
+
+    .hero-section h1 {
+        font-size: 30px;
+    }
+    
+    .search-form {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .form-group {
+        flex: none; /* Disable flex-grow on mobile */
+        width: 100%;
+    }
+
+    .btn-search {
+        width: 100%;
+        height: 50px;
+        margin-top: 10px;
+        align-self: center;
+    }
+
+    .value-props .container {
+        flex-direction: column;
+    }
+
+    .prop-card {
+        margin-bottom: 20px;
+    }
+}

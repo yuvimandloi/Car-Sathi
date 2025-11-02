@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Saathi - Share Rides, Save Money</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">🚗 Car Saathi</div>
+            <nav class="nav-links">
+                <a href="index.html">Find a Ride</a>
+                <a href="offer-ride.html">Offer a Ride</a>
+                
+            </nav>
+
+            <div class="user-actions">
+            <span id="logged-out-links">
+               <a href="login.html">Log in</a>
+               <a href="signup.html" class="btn-signup">Sign up</a>
+            </span>
+    
+             <span id="logged-in-links" style="display: none;">
+                <a href="profile.html">My Account</a> 
+                <a href="#" id="logout-button" class="btn-signup">Log Out</a> 
+             </span>
+            </div>
+            
+    </header>
+
+    <main class="hero-section">
+        <div class="container">
+            <h1>Your pick of rides at low prices with Car Saathi</h1>
+            
+            <form id="search-form" class="search-form">
+                <div class="form-group">
+                    <label for="leaving">Leaving from</label>
+                    <input type="text" id="leaving" placeholder="e.g. New Delhi">
+                </div>
+                <div class="form-group">
+                    <label for="going">Going to</label>
+                    <input type="text" id="going" placeholder="e.g. Chandigarh">
+                </div>
+                <div class="form-group">
+                    <label for="when">When</label>
+                    <input type="date" id="when" value="2025-11-02">
+                </div>
+                <div class="form-group">
+                    <label for="passengers">Who</label>
+                    <select id="passengers">
+                        <option value="1">1 passenger</option>
+                        <option value="2">2 passengers</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-search">Search</button>
+            </form>
+        </div>
+    </main>
+
+    <section class="value-props">
+        <div class="container">
+            <div class="prop-card">
+                <h3>💰 Affordable Rides</h3>
+                <p>No matter where you're going, find the perfect ride from our wide range of destinations and routes at low prices.</p>
+            </div>
+            <div class="prop-card">
+                <h3>🛡️ Travel with Trust</h3>
+                <p>We check reviews, profiles and IDs, so you know who you’re travelling with and can book your ride at ease on our secure platform.</p>
+            </div>
+            <div class="prop-card">
+                <h3>📲 Quick Booking</h3>
+                <p>Booking a ride has never been easier! Thanks to our simple app powered by great technology, you can book a ride close to you in just minutes.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="driver-cta-section">
+        <div class="container">
+            <h2>Driving in your car soon?</h2>
+            <p>Let's make this your least expensive journey ever.</p>
+            <a class="btn-primary" href="offer-ride.html">Offer a ride</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Car Saathi, 2025 © | Terms and Conditions</p>
+            </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

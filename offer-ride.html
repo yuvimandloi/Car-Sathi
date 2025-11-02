@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Offer a Ride - Car Saathi</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="offer-ride-style.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container">
+        <div class="logo">🚗 Car Saathi</div>
+        <nav class="nav-links">
+          <a href="index.html">Find a Ride</a>
+          <a href="#">Offer a Ride</a>
+        </nav>
+
+         <div class="user-actions">
+    <span id="logged-out-links">
+        <a href="login.html">Log in</a>
+        <a href="signup.html" class="btn-signup">Sign up</a>
+    </span>
+    
+    <span id="logged-in-links" style="display: none;">
+        <a href="profile.html">My Account</a> 
+        <a href="#" id="logout-button" class="btn-signup">Log Out</a> 
+    </span>
+</div>
+
+      </div>
+    </header>
+
+    <main class="offer-ride-section">
+      <div class="container">
+        <h1>Publish Your Ride and Save!</h1>
+        <p>
+          Help others travel and cut your fuel costs by offering a ride on **Car
+          Saathi**.
+        </p>
+
+        <form id="offer-form" class="ride-offer-form">
+          <div class="form-row">
+            <div class="form-group required">
+              <label for="departure">Leaving From</label>
+              <input
+                type="text"
+                id="departure"
+                placeholder="e.g. Pune"
+                required
+              />
+            </div>
+            <div class="form-group required">
+              <label for="destination">Going To</label>
+              <input
+                type="text"
+                id="destination"
+                placeholder="e.g. Hyderabad"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group required">
+              <label for="ride-date">Date of Journey</label>
+              <input type="date" id="ride-date" value="2025-11-03" required />
+            </div>
+            <div class="form-group required">
+              <label for="ride-time">Departure Time</label>
+              <input type="time" id="ride-time" value="08:00" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group required">
+              <label for="seats">Available Seats</label>
+              <select id="seats" required>
+                <option value="" disabled selected>Select seats</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+            <div class="form-group required">
+              <label for="price">Price Per Seat (₹)</label>
+              <input
+                type="number"
+                id="price"
+                placeholder="e.g. 500"
+                min="50"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="details">Additional Ride Details (Optional)</label>
+            <textarea
+              id="details"
+              rows="3"
+              placeholder="e.g., Luggage limits, music preference, highway route..."
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit-ride">
+            Publish Ride Now
+          </button>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>Car Saathi, 2025 © | Terms and Conditions</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

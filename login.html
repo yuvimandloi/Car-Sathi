@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in to Car Saathi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login-style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">🚗 Car Saathi</div>
+            <nav class="nav-links">
+                <a href="index.html">Find a Ride</a>
+                <a href="offer-ride.html">Offer a Ride</a>
+            </nav>
+            
+            <div class="user-actions">
+            <span id="logged-out-links">
+               <a href="login.html">Log in</a>
+               <a href="signup.html" class="btn-signup">Sign up</a>
+            </span>
+    
+             <span id="logged-in-links" style="display: none;">
+                <a href="profile.html">My Account</a> 
+                <a href="#" id="logout-button" class="btn-signup">Log Out</a> 
+             </span>
+            </div>
+
+    </header>
+
+    <main class="login-section">
+        <div class="container">
+            <div class="login-box">
+                <h1>Welcome Back to Car Saathi</h1>
+                <p>Log in to access your saved rides and bookings.</p>
+
+                <form id="login-form" class="auth-form">
+                    <div class="form-group">
+                        <label for="email-or-phone">Email or Phone Number</label>
+                        <input type="text" id="email-or-phone" placeholder="Enter email or 10-digit number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter your password" required>
+                    </div>
+
+                   <div class="forgot-link">
+                        <a href="forgot-password.html">Forgot password?</a>
+                    </div>>
+                    
+                    <button type="submit" class="btn-login">Log In</button>
+                    
+                    <div class="separator">OR</div>
+
+                    <button type="button" class="btn-social">Continue with Google</button>
+                    <button type="button" class="btn-social btn-social-facebook">Continue with Facebook</button>
+
+                </form>
+
+                 <p class="signup-prompt">
+                  New to Car Saathi? <a href="signup.html">**Sign Up**</a>
+                 </p>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>Car Saathi</h3>
+                <ul>
+                    <li><a href="#">Who We Are</a></li>
+                    <li><a href="#">How It Works</a></li>
+                    <li><a href="#">Careers (We're Hiring!)</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Help & Support</h3>
+                <ul>
+                    <li><a href="#">Help Centre</a></li>
+                    <li><a href="#">Trust & Safety</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Car Saathi, 2025 © | Go anywhere with a Saathi.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+/* This file extends the base styling from style.css */
+
+.offer-ride-section {
+    padding: 50px 0 80px;
+    background-color: var(--bg-light); 
+}
+
+.offer-ride-section h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 36px;
+}
+
+.offer-ride-section p {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+.ride-offer-form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: var(--border-radius); /* Use global variable */
+    box-shadow: var(--shadow-light); /* Use global variable */
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    flex: 1;
+}
+
+.form-group.full-width {
+    flex: none;
+    width: 100%;
+}
+
+.ride-offer-form label {
+    display: block;
+    font-weight: 600; /* Consistent with homepage form */
+    font-size: 14px;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+/* Highlight required fields */
+.form-group.required label::after {
+    content: " *";
+    color: red;
+}
+
+.ride-offer-form input[type="text"], 
+.ride-offer-form input[type="number"], 
+.ride-offer-form input[type="date"], 
+.ride-offer-form input[type="time"], 
+.ride-offer-form select,
+.ride-offer-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.ride-offer-form textarea {
+    resize: vertical;
+}
+
+.btn-submit-ride {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 30px;
+    background-color: var(--primary-color); /* Use global variable */
+    color: white;
+    border: none;
+    border-radius: var(--border-radius); /* Use global variable */
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.2s;
+}
+
+.btn-submit-ride:hover {
+    background-color: var(--secondary-color); /* Use global variable for hover */
+}
+
+/* Responsive adjustment for the form */
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .ride-offer-form {
+        padding: 20px;
+    }
+}
